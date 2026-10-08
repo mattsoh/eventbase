@@ -12,6 +12,10 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  # Allow any host in development
+  # https://www.fngtps.com/2019/rails6-blocked-host/
+  config.hosts.clear
+
   # Enable server timing.
   config.server_timing = true
 
