@@ -1,0 +1,24 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__inner">
+    <span class="tag tag--mint"><%= placeholder_text %></span>
+
+    <h1 id="hero-title" class="display-xl hero__title"><%= placeholder_text %></h1>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#"><%= placeholder_text %></a>
+      <a class="btn" href="#"><%= placeholder_text %></a>
+    </div>
+
+    <div class="code-chip" data-controller="clipboard">
+      <code class="code-chip__command" data-clipboard-target="source"><%= placeholder_text %></code>
+      <button type="button" class="code-chip__copy" data-action="clipboard#copy" aria-label="Copy">Copy</button>
+      <span class="visually-hidden" data-clipboard-target="status" aria-live="polite"></span>
+    </div>
+
+    <ul class="hero__features" aria-label="Highlights">
+      <% WelcomeHelper::FEATURE_COUNT.times do %>
+        <li class="tag tag--flat"><%= placeholder_text %></li>
+      <% end %>
+    </ul>
+  </div>
+</section>

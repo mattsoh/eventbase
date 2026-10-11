@@ -1,0 +1,113 @@
+/*
+ * Design tokens: Eventbase Maker design system.
+ * Source of truth: DesignStyle/DESIGN.MD (local, gitignored).
+ *
+ * Components use the semantic tokens (--surface, --text, --outline, ...);
+ * the raw palette exists so the semantic layer can be re-pointed per theme.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Raw palette */
+  --color-crimson: #a3143f;
+  --color-crimson-hover: #8a0f34;
+  --color-rust: #a14e17;
+  --color-forest: #1e6b47;
+  --color-mint: #a7eed8;
+  --color-peach: #ffd3b3;
+  --color-ink: #1c1b20;
+  --color-ink-muted: #5f5b66;
+  --color-cream: #f6f1e8;
+  --color-paper: #ffffff;
+  --color-sunken: #efe9df;
+  --color-line: #e2dacb;
+
+  /* Semantic: light */
+  --canvas: var(--color-cream);
+  --surface: var(--color-paper);
+  --sunken: var(--color-sunken);
+  --text: var(--color-ink);
+  --text-muted: var(--color-ink-muted);
+  --line: var(--color-line);
+  --outline-color: var(--color-ink);
+  --shadow-color: var(--color-ink);
+  --brand: var(--color-crimson);
+  --brand-hover: var(--color-crimson-hover);
+  --brand-text: var(--color-crimson); /* crimson used as text or outline */
+  --rust-text: var(--color-rust);
+  --forest-text: var(--color-forest);
+  --on-brand: #ffffff;
+  --on-tint: var(--color-ink);         /* text on mint / peach, every theme */
+  --strip: var(--color-ink);
+  --on-strip: var(--color-cream);
+
+  /* Type */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Shape */
+  --radius-tag: 6px;
+  --radius-card: 16px;
+  --radius-panel: 28px;
+  --radius-pill: 9999px;
+  --outline: 1.5px solid var(--outline-color);
+
+  /* Depth: hard, unblurred ink shadows; soft shadow only for sunken panels */
+  --shadow-hard-sm: 0 2px 0 0 var(--shadow-color);
+  --shadow-hard: 0 4px 0 0 var(--shadow-color);
+  --shadow-hard-lg: 0 6px 0 0 var(--shadow-color);
+  --shadow-panel: 0 24px 48px -24px rgba(28, 27, 32, 0.25);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration: 160ms;
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 24px;
+  --section: 96px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --canvas: #16151a;
+    --surface: #1f1e24;
+    --sunken: #26252c;
+    --text: #f4efe6;
+    --text-muted: #a9a4af;
+    --line: #34323b;
+    --outline-color: #34323b;
+    --shadow-color: #0b0a0d;
+    --brand-text: #d23a67;
+    --rust-text: #e08a4f;
+    --forest-text: #5fbf8d;
+    --strip: #0b0a0d;
+    --on-strip: #f4efe6;
+    --shadow-panel: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+  }
+}
+
+:root[data-theme="dark"] {
+  --canvas: #16151a;
+  --surface: #1f1e24;
+  --sunken: #26252c;
+  --text: #f4efe6;
+  --text-muted: #a9a4af;
+  --line: #34323b;
+  --outline-color: #34323b;
+  --shadow-color: #0b0a0d;
+  --brand-text: #d23a67;
+  --rust-text: #e08a4f;
+  --forest-text: #5fbf8d;
+  --strip: #0b0a0d;
+  --on-strip: #f4efe6;
+  --shadow-panel: 0 24px 48px -24px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+    --section: 64px;
+  }
+}

@@ -1,0 +1,35 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <%= link_to root_path, class: "site-header__brand", aria: { label: "Home" } do %>
+      <%= render "shared/logo", size: 32 %>
+    <% end %>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__links">
+        <% 5.times do %>
+          <li><a href="#"><%= placeholder_text %></a></li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--sm" href="#"><%= placeholder_text %></a>
+      <a class="btn btn--sm btn--primary" href="#"><%= placeholder_text %></a>
+    </div>
+
+    <details class="site-menu">
+      <summary class="btn btn--sm site-menu__toggle" aria-label="Open menu">Menu</summary>
+      <div class="site-menu__panel card">
+        <ul>
+          <% 5.times do %>
+            <li><a href="#"><%= placeholder_text %></a></li>
+          <% end %>
+        </ul>
+        <div class="site-menu__actions">
+          <a class="btn btn--sm" href="#"><%= placeholder_text %></a>
+          <a class="btn btn--sm btn--primary" href="#"><%= placeholder_text %></a>
+        </div>
+      </div>
+    </details>
+  </div>
+</header>

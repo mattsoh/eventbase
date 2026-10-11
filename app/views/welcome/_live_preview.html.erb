@@ -1,0 +1,52 @@
+<section class="preview" aria-labelledby="preview-title">
+  <div class="container">
+    <div class="panel preview__panel">
+      <h2 id="preview-title" class="visually-hidden"><%= placeholder_text %></h2>
+
+      <div class="preview__bar">
+        <span class="preview__dots" aria-hidden="true">
+          <span class="preview__dot preview__dot--crimson"></span>
+          <span class="preview__dot preview__dot--rust"></span>
+          <span class="preview__dot preview__dot--mint"></span>
+        </span>
+        <div class="preview__status">
+          <span class="tag tag--forest tag--flat"><%= placeholder_text %></span>
+          <span class="mono-meta muted"><%= placeholder_text %></span>
+        </div>
+      </div>
+
+      <div class="preview__grid">
+        <% 3.times do %>
+          <article class="card tile">
+            <header class="tile__head">
+              <h3 class="tile__title"><%= placeholder_text %></h3>
+              <span class="tag tag--flat"><%= placeholder_text %></span>
+            </header>
+            <%= placeholder_image(width: 128, height: 128) %>
+            <ul class="inventory">
+              <% WelcomeHelper::ROW_COUNT.times do %>
+                <li class="inventory__row">
+                  <span class="mono-meta"><%= placeholder_text %></span>
+                  <span class="mono-meta muted"><%= placeholder_text %></span>
+                </li>
+              <% end %>
+            </ul>
+          </article>
+        <% end %>
+      </div>
+
+      <article class="card engine">
+        <span class="engine__icon" aria-hidden="true"><%= placeholder_image %></span>
+        <div class="engine__body">
+          <h3 class="engine__title"><%= placeholder_text %></h3>
+          <p class="body-sm muted"><%= placeholder_text %></p>
+        </div>
+        <div class="engine__stat">
+          <span class="mono-meta muted"><%= placeholder_text %></span>
+          <strong class="engine__value"><%= placeholder_text %></strong>
+        </div>
+        <span class="tag tag--peach"><%= placeholder_text %></span>
+      </article>
+    </div>
+  </div>
+</section>

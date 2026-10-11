@@ -1,0 +1,37 @@
+<section id="featured" class="section featured" aria-labelledby="featured-title">
+  <div class="container">
+    <header class="featured__head">
+      <div class="section__intro">
+        <span class="tag tag--mint"><%= placeholder_text %></span>
+        <h2 id="featured-title" class="display-lg"><%= placeholder_text %></h2>
+      </div>
+      <a class="btn btn--sm" href="#"><%= placeholder_text %></a>
+    </header>
+
+    <div class="featured__grid">
+      <% WelcomeHelper::EVENT_COUNT.times do |index| %>
+        <% accent = accent_for(index) %>
+        <article class="card event">
+          <div class="event__media">
+            <%= placeholder_image(css_class: "placeholder-image--fill") %>
+            <span class="tag tag--<%= accent %> event__format"><%= placeholder_text %></span>
+            <span class="event__date mono-meta"><%= placeholder_text %></span>
+          </div>
+          <div class="event__meta">
+            <span class="mono-meta muted event__location"><%= placeholder_text %></span>
+            <span class="tag tag--flat tag--peach"><%= placeholder_text %></span>
+          </div>
+          <h3 class="title"><%= placeholder_text %></h3>
+          <p class="body-sm muted event__summary"><%= placeholder_text %></p>
+          <ul class="event__tags mono-meta muted">
+            <% 3.times do %><li><%= placeholder_text %></li><% end %>
+          </ul>
+          <div class="event__foot">
+            <span class="mono-meta muted"><%= placeholder_text %></span>
+            <a class="btn btn--sm <%= accent == "crimson" ? "btn--primary" : "btn--#{accent}" %>" href="#"><%= placeholder_text %></a>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</section>

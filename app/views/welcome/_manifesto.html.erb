@@ -1,0 +1,20 @@
+<section class="section manifesto" aria-labelledby="manifesto-title">
+  <div class="container">
+    <div class="panel manifesto__panel">
+      <header class="section__intro">
+        <span class="tag tag--peach"><%= placeholder_text %></span>
+        <h2 id="manifesto-title" class="display-lg"><%= placeholder_text %></h2>
+      </header>
+
+      <ol class="manifesto__grid">
+        <% WelcomeHelper::MANIFESTO_COUNT.times do |index| %>
+          <li class="card manifesto__item">
+            <span class="number-badge number-badge--<%= accent_for(index) %>" aria-hidden="true"><%= format("%02d", index + 1) %></span>
+            <h3 class="title"><%= placeholder_text %></h3>
+            <p class="body-sm muted"><%= placeholder_text %></p>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</section>

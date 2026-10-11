@@ -1,0 +1,14 @@
+<section class="ticker" aria-label="At a glance">
+  <div class="ticker__track">
+    <% 2.times do |copy| %>
+      <ul class="ticker__list" <%= "aria-hidden=true" if copy.positive? %>>
+        <% WelcomeHelper::TICKER_COUNT.times do |index| %>
+          <li class="ticker__item">
+            <span class="ticker__icon <%= index.even? ? "ticker__icon--mint" : "ticker__icon--peach" %>"><%= placeholder_image %></span>
+            <%= placeholder_text %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</section>

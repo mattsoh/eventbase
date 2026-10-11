@@ -1,0 +1,28 @@
+<section id="audiences" class="section audiences" aria-labelledby="audiences-title">
+  <div class="container">
+    <header class="section__intro section__intro--center">
+      <span class="tag tag--peach"><%= placeholder_text %></span>
+      <h2 id="audiences-title" class="display-lg"><%= placeholder_text %></h2>
+      <p class="body-lg muted"><%= placeholder_text %></p>
+    </header>
+
+    <div class="audiences__grid">
+      <% %w[crimson rust].each do |accent| %>
+        <article class="card audience">
+          <div class="audience__head">
+            <span class="tag tag--<%= accent %>"><%= placeholder_text %></span>
+            <%= placeholder_image(css_class: "audience__icon") %>
+          </div>
+          <h3 class="display-md"><%= placeholder_text %></h3>
+          <p class="muted"><%= placeholder_text %></p>
+          <ul class="checklist">
+            <% WelcomeHelper::ROW_COUNT.times do %>
+              <li><span><strong><%= placeholder_text %>:</strong> <%= placeholder_text %></span></li>
+            <% end %>
+          </ul>
+          <a class="btn <%= accent == "crimson" ? "btn--primary" : "btn--rust" %> btn--block" href="#"><%= placeholder_text %></a>
+        </article>
+      <% end %>
+    </div>
+  </div>
+</section>

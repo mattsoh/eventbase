@@ -1,0 +1,10 @@
+<%# locals: (variant: :lockup, size: 36) -%>
+<%# Variants: :lockup (mark + wordmark), :mark. The mark is a placeholder image until the real logo exists. -%>
+<% if variant == :mark %>
+  <span class="logo logo--mark"><%= placeholder_image(css_class: "logo__mark", width: size, height: size) %></span>
+<% else %>
+  <span class="logo logo--lockup">
+    <%= placeholder_image(css_class: "logo__mark", width: size, height: size) %>
+    <span class="logo__word"><%= placeholder_text %></span>
+  </span>
+<% end %>
