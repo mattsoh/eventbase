@@ -160,14 +160,22 @@ something similar if the rules get complicated.
 
 ## CSS
 
-The styles are layered, and they load in this order:
+The styles are split into layers:
 
 1. **`tokens.css`**: design tokens. Raw palette (`--color-crimson`, `--color-cream`...) plus
    semantic tokens (`--surface`, `--text`, `--outline`...). Dark mode is handled here by
    re-pointing the semantic tokens.
-2. **`base.css`**: resets, typography, base element styles.
-3. **`site.css`**: layout and the shared header and footer.
-4. **One file per page or feature**, e.g. `welcome.css`, `events.css`.
+2. **`base.css`**: resets, typography, and the small primitives (`.tag`, `.btn`, `.card`,
+   `.panel`).
+3. **`components.css`**: bigger shared pieces built from those primitives: `.section`,
+   `.event-card`, `.code-chip`, `.meter`, `.checklist` and so on. If a second page needs
+   something from a page stylesheet, move it here.
+4. **`site.css`**: layout and the shared header and footer.
+5. **One file per page or feature**, e.g. `welcome.css`, `events.css`. Only layout for that
+   page goes here.
+
+`stylesheet_link_tag :app` loads every file in the folder alphabetically, so don't rely on
+file order to win a conflict. Use a more specific selector (`.hero__features .tag`).
 
 Rules:
 

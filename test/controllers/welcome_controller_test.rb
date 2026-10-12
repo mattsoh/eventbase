@@ -7,8 +7,8 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "h1#hero-title", "Placeholder text"
     assert_select "header.site-header .placeholder-image.logo__mark"
-    assert_select "#featured article.event", 3
-    assert_select "#featured .event__media .placeholder-image", 3
+    assert_select "#featured article.event-card", 3
+    assert_select "#featured .event-card__media .placeholder-image", 3
     assert_select "footer.site-footer"
   end
 end

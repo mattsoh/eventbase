@@ -172,7 +172,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), monospace;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -236,7 +236,7 @@
 
 .site-footer__heading {
   margin-bottom: 14px;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), monospace;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
