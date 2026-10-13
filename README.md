@@ -18,16 +18,6 @@ bin/setup
 That installs the gems and JS packages, creates and migrates the database, and starts the
 app. Open http://localhost:3000.
 
-In PowerShell, typing `bin/setup` silently does nothing, because Windows doesn't know how to
-run a file with no extension. Run it through Ruby instead, and skip the server step (it uses
-`bin/dev`, which needs a bash shell):
-
-```powershell
-ruby bin/setup --skip-server
-```
-
-Then start the app as described under the two-terminal option below.
-
 ### After that
 
 ```bash
